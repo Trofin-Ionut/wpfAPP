@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Button Content="Add" HorizontalAlignment="Left" Margin="186,362,0,0" VerticalAlignment="Top" Height="30" Width="105" Click="AddStuff"/>
+        <DataGrid x:Name="dataGrid1"  AutoGenerateColumns="False" Margin="10,47,403,236" GridLinesVisibility="Horizontal" CanUserDeleteRows="False" CanUserAddRows="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Address" Binding="{Binding Address}" />
+                <DataGridTextColumn Header="Port" Binding="{Binding Port}" />
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
